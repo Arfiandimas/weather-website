@@ -39,7 +39,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         name: 'Arfian Dimas',
-        helpText : 'ini pesan help'
+        helpText : 'Tidak ada artikel'
     })
 })
 
