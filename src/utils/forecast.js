@@ -9,7 +9,7 @@ const forecast = (latlong, callback) => {
         } else if (body.error) {
             callback('Lokasi tidak ditemukan', undefined)
         } else {
-            callback(undefined, "It is currently " + body.current.temp_c + " degrees out. There is a " + body.current.precip_in + "% chance of " + body.current.condition.text)
+            callback(undefined, "It is currently " + body.current.temp_c + " degrees out. This high today is " + body.forecast.forecastday[0].day.maxtemp_c + " with a low of " + body.forecast.forecastday[0].day.mintemp_c + ". There is a " + body.current.precip_in + "% chance of " + body.current.condition.text)
         }
     })
 }
